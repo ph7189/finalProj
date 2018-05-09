@@ -1,11 +1,14 @@
 package jjgpFinalProject;
 
+import java.awt.Color;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
 public class game{
 	
+	public enum Class{Mage, Paladin};
 	JFrame frame;
 	JPanel panel;
 	
@@ -20,8 +23,10 @@ public class game{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(panel);
 		frame.pack();
-		frame.setSize(600, 600);
+		frame.setSize(1920, 1080);
 		frame.setVisible(true);
+		panel.setBackground(Color.BLACK);
+		frame.repaint();
 	}
 
 }
