@@ -1,13 +1,34 @@
 package jjgpFinalProject;
 
-public class minion extends card{
+public abstract class minion{
 
 	private int hp;
-	private int attk;
+	private int maxhp;
+	private int atk;
 	
 	
-	public minion() {
-		// TODO Auto-generated constructor stub
+	public minion(int hp, int atk) {
+		this.hp = hp;
+		this.maxhp = this.hp;
+		this.atk = atk;
 	}
+	
+	public int gethp() {
+		return hp;
+	}
+	
+	public int getatk() {
+		return atk;
+	}
+	
+	public abstract void draw();
+	public void dmg(int i) {
+		hp -= i;
+	}
+	public void heal(int i) {
+		hp = Math.min(hp+i, maxhp);
+	}
+	public abstract void battleCry();
+	
 
 }
