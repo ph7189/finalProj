@@ -1,10 +1,13 @@
 package jjgpFinalProject;
 
 public abstract class card {
-	private int manaCost;
 	
-	public card() {
-		// TODO Auto-generated constructor stub
+	private int manaCost;
+	public enum Type{Minion, Weapon, Spell};
+	private Type cardType;
+	
+	public card(Type t) {
+		cardType = t;
 	}
 
 }
