@@ -19,6 +19,9 @@ public class game{
 
 	private void start() {
 		
+		h1 = new hero(0);
+		h2 = new hero(1);
+		
 		frame = new JFrame("Hearthstone");
 		panel = new JPanel() {
 			@Override
@@ -33,8 +36,7 @@ public class game{
 		frame.setSize(1920, 1080);
 		frame.setVisible(true);
 		panel.setBackground(Color.BLACK);
-		h1 = new hero(0);
-		h2 = new hero(1);
+		//h1.attack(h2);
 		frame.repaint();
 	}
 	

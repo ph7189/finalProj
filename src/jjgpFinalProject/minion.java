@@ -28,6 +28,15 @@ public abstract class minion{
 	public void heal(int i) {
 		hp = Math.min(hp+i, maxhp);
 	}
+	
+	public void attack(minion m) {
+		m.dmg(getatk());
+		dmg(m.getatk());
+	}
+	public void attack(hero h) {
+		h.dmg(getatk());
+	}
+	
 	public abstract void battleCry();
 	
 

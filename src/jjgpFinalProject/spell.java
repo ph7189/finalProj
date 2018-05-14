@@ -1,6 +1,6 @@
 package jjgpFinalProject;
 
-public class spell{
+public abstract class spell{
 
 	public spell() {
 		// TODO Auto-generated constructor stub
